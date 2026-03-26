@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-// http://localhost:3000/api/products/search?q=keyboard&category=Electronics&minPrice=900&maxPrice=10000
-
 function App() {
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
