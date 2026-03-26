@@ -3,7 +3,7 @@
 
 # 📄 Database Schema Overview
 
-The system is designed around a simple inventory search use case where multiple suppliers list their products and users can filter/search them.
+The system is designed around a simple inventory where multiple suppliers list their products.
 
 ### Collections / Tables
 
@@ -15,7 +15,7 @@ The system is designed around a simple inventory search use case where multiple 
 * `contact`
 
 **Purpose:**
-Stores information about inventory providers. This helps in grouping and filtering inventory supplier-wise.
+Stores information about inventory providers. This helps in grouping inventory supplier-wise.
 
 ---
 
