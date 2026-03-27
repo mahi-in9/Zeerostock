@@ -9,6 +9,7 @@ function App() {
   const [category, setCategory] = useState("");
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(Infinity);
+  
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
