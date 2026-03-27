@@ -10,10 +10,12 @@ function App() {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(Infinity);
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const timer = setTimeout(() => {
       fetch(
-        `http://localhost:3000/api/products/search?q=${search}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
+        `${apiUrl}/api/products/search?q=${search}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -25,7 +27,7 @@ function App() {
   }, [search, category, minPrice, maxPrice]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products/search")
+    fetch(`${apiUrl}/api/products/search`)
       .then((res) => res.json())
       .then((data) => setAllProducts(data.data));
   }, []);
